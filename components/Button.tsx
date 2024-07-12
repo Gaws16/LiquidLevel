@@ -22,9 +22,7 @@ export default function Button({
       darkColor={darkColor}
     >
       <Pressable onPress={onPress} style={styles.button}>
-        <ThemedText lightColor={lightColor} darkColor={darkColor}>
-          {label}
-        </ThemedText>
+        <ThemedText>{label}</ThemedText>
       </Pressable>
     </ThemedView>
   );
@@ -38,10 +36,9 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   button: {
-    backgroundColor: "lightblue",
-    padding: 10,
+    padding: 7,
     borderRadius: 10,
-    width: 200,
+    width: 80,
     alignItems: "center",
   },
 });
