@@ -1,6 +1,8 @@
+import Button from "@/components/Button";
 import { HelloWave } from "@/components/HelloWave";
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
+import { Link, Navigator } from "expo-router";
 import { Image, StyleSheet, Text, View } from "react-native";
 const logo = require("../assets/images/react-logo.png");
 export default function Index() {
@@ -9,6 +11,9 @@ export default function Index() {
       <Image source={logo} style={styles.logo} />
       <ThemedText type="title">Wellcome page</ThemedText>
       <HelloWave />
+      <Link href="/posts" push asChild>
+        <Button label="Wellcome" />
+      </Link>
     </ThemedView>
   );
 }
