@@ -1,31 +1,11 @@
-import Button from "@/components/Button";
-import { HelloWave } from "@/components/HelloWave";
-import { ThemedText } from "@/components/ThemedText";
-import { ThemedView } from "@/components/ThemedView";
-import { Link, Navigator } from "expo-router";
-import { Image, StyleSheet, Text, View } from "react-native";
-const logo = require("../assets/images/react-logo.png");
+import App from "@/components/pages/App";
+
+import { PaperProvider } from "react-native-paper";
+
 export default function Index() {
   return (
-    <ThemedView style={styles.container}>
-      <Image source={logo} style={styles.logo} />
-      <ThemedText type="title">Wellcome page</ThemedText>
-      <HelloWave />
-      <Link href="/posts" push asChild>
-        <Button label="Wellcome" />
-      </Link>
-    </ThemedView>
+    <PaperProvider>
+      <App />
+    </PaperProvider>
   );
 }
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    gap: 16,
-  },
-  logo: {
-    width: 100,
-    height: 100,
-  },
-});
